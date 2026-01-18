@@ -25,5 +25,5 @@ This application allows candidates to fill out a hiring form and upload document
 1. Clone the repository:
 
    ```bash
-   git clone https://your-repository-url.git
+   git clone https://github.com/OmariMohammedmounir/Hiring-Form.git
    cd your-repository
