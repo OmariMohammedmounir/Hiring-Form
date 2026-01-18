@@ -1,0 +1,166 @@
+/* Style général */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  color: #333;
+}
+
+/* Container centré */
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Titres */
+h1, h2, h3 {
+  text-align: center;
+  margin: 20px 0;
+  animation: fadeInDown 1s ease-out;
+}
+
+/* Liens */
+a {
+  color: #3498db;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #1d6fa5;
+}
+
+/* Formulaire */
+.cool-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+/* Flex container for each row */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Each form group */
+.form-group {
+  flex: 1 1 calc(50% - 20px);
+  position: relative;
+}
+
+.form-group.full {
+  flex: 1 1 100%;
+}
+
+/* Input and select styling */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group input[type="file"],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  transition: border 0.3s;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Floating labels */
+.form-group label {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: #fff;
+  padding: 0 5px;
+  font-size: 12px;
+  color: #3498db;
+  pointer-events: none;
+}
+
+/* Checkbox container */
+.check-container {
+  display: flex;
+  align-items: center;
+}
+
+.check-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Submit button */
+.cool-form button {
+  background: #3498db;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin: 0 auto;
+  display: block;
+}
+
+.cool-form button:hover {
+  background: #1d6fa5;
+}
+
+/* Animation keyframes */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ensure animated elements are visible */
+.animate {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+/* Section optionnelle pour salarié */
+.section-salarie {
+  display: none;
+}
+.form-group input[type="file"] {
+  padding: 0.65rem 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Label Positioning Adjustment */
+.form-group label {
+  left: 1.25rem;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  top: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+  top: -2px;
+  font-size: 0.8rem;
+  background: linear-gradient(0deg, rgba(255,255,255,0) 50%, white 50%);
+}

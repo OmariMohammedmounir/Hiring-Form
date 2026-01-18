@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Global Styles */
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f4f8;
+    color: #333;
+  }
+  
+  .dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 26px;
+  }
+  
+  header nav a {
+    color: #fff;
+    margin-left: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  header nav a:hover {
+    color: #d1eafc;
+  }
+  
+  /* Token Section */
+  .token-section {
+    margin: 20px 0;
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .token-section h2 {
+    margin-top: 0;
+    color: #3498db;
+    font-size: 20px;
+  }
+  
+  .token-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  #generate-token-btn,
+  #copy-token-btn {
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #generate-token-btn {
+    background: linear-gradient(135deg, #1d6fa5, #155a82);
+  }
+  
+  #generate-token-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  #copy-token-btn {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+  }
+  
+  #copy-token-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .token-result input {
+    width: 400px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Table Section */
+  .table-section {
+    margin-top: 30px;
+  }
+  
+  .table-section h2 {
+    text-align: center;
+    color: #3498db;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  /* Search Container */
+  .search-container {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  #table-search {
+    width: 300px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 14px;
+  }
+  
+  /* Table Styling */
+  .pro-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  
+  .pro-table thead {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: #fff;
+  }
+  
+  .pro-table th, .pro-table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    max-width: 150px;
+    word-wrap: break-word; /* Allow wrapping of long words */
+      
+    overflow: hidden;          /* Hide overflow */
+    text-overflow: ellipsis;   /* Display ellipsis (…) */
+}
+
+  
+  .pro-table tbody .summary-row:nth-child(even) {
+    background: #f9f9f9;
+  }
+  
+  .pro-table tbody .summary-row:hover {
+    background: #f1f1f1;
+  }
+  
+  /* "Afficher plus" Button */
+  .toggle-details {
+    padding: 8px 14px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border: none;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 14px;
+  }
+  
+  .toggle-details:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Details Row */
+  .details-row {
+    display: none;
+    background: #eef5fa;
+    text-align: center;
+    font-size: 11px;
+    padding: 12px;
+    transition: all 0.3s ease;
+  }
+  
+  .details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .details-list li {
+    margin-bottom: 4px;
+  }
+  
+  /* Pagination Controls */
+  .pagination {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .pagination button {
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    border: none;
+    color: #fff;
+    border-radius: 50px;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 14px;
+  }
+  
+  .pagination button:disabled {
+    background: #ccc;
+    cursor: default;
+  }
+  
+  .pagination button:hover:not(:disabled) {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .pagination span {
+    font-size: 14px;
+    margin: 0 10px;
+  }

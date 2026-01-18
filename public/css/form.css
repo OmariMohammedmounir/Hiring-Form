@@ -1,0 +1,237 @@
+/* Style général */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container centré */
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Titres */
+h1, h2, h3 {
+  text-align: center;
+  margin: 20px 0;
+  animation: fadeInDown 1s ease-out;
+}
+
+/* Formulaire */
+.cool-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+/* Flex container for each row */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Each form group */
+.form-group {
+  flex: 1 1 calc(50% - 20px);
+  position: relative;
+  min-width: 250px;
+}
+
+.form-group.full {
+  flex: 1 1 100%;
+}
+
+/* Input and select styling */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group input[type="file"],
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  transition: border 0.3s;
+  font-size: 16px;
+  box-sizing: border-box;
+  background: #f8f9fa;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3498db;
+  background: #fff;
+}
+
+/* Floating labels */
+.form-group label:not(.check-container label) {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: #fff;
+  padding: 0 5px;
+  font-size: 12px;
+  color: #3498db;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Checkbox container */
+.check-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  position: relative;
+}
+
+.check-container input[type="checkbox"] {
+  margin-right: 15px;
+  transform: scale(1.2);
+  accent-color: #3498db;
+}
+
+.check-container label {
+  position: static !important;
+  background: none !important;
+  padding: 0 !important;
+  font-size: 16px !important;
+  color: #333 !important;
+  transform: none !important;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Submit button */
+.cool-form button {
+  background: #3498db;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 20px auto;
+  display: block;
+  width: auto;
+}
+
+.cool-form button:hover {
+  background: #1d6fa5;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* Animation keyframes */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+      padding: 10px;
+  }
+
+  .cool-form {
+      padding: 20px;
+      margin: 10px auto;
+  }
+
+  .form-row {
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 15px;
+  }
+
+  .form-group {
+      flex-basis: 100%;
+      min-width: auto;
+  }
+
+  .cool-form button {
+      width: 100%;
+      padding: 15px;
+  }
+
+  .form-group label:not(.check-container label) {
+      font-size: 14px;
+      top: -8px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"],
+  input[type="file"],
+  select {
+      font-size: 16px;
+      padding: 12px;
+  }
+
+  input[type="file"] {
+      padding: 8px;
+  }
+
+  .check-container label {
+      font-size: 15px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      padding: 5px;
+  }
+
+  .cool-form {
+      padding: 15px;
+  }
+
+  .form-row {
+      margin-bottom: 10px;
+      gap: 10px;
+  }
+
+  h1 {
+      font-size: 1.8rem;
+      margin: 15px 0;
+  }
+
+  .check-container {
+      margin: 8px 0;
+  }
+
+  .check-container label {
+      font-size: 14px !important;
+  }
+
+  .form-group input[type="file"] {
+      font-size: 14px;
+  }
+}
+
+/* Section optionnelle pour salarié */
+.section-salarie {
+  display: none;
+}
+
+.error-message {
+  margin: 15px 0;
+  font-size: 0.9rem;
+}
