@@ -1,6 +1,6 @@
 <?php
 // config/database.php
-define('BASE_URL', 'http://localhost/weetel/public/');
+define('BASE_URL', 'http://localhost/form/public/');
 $host    = 'localhost';
 $dbname  = 'mymvc';
 $user    = 'root';      // default XAMPP username
