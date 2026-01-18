@@ -1,29 +1,29 @@
-# weetelForm
-Formulaire Weetel
+# hiringForm
+Hiring Form
 
 ## Description
 
-Cette application permet aux candidats de remplir un formulaire et de télécharger des documents. Un backend en PHP gère l'enregistrement des données soumises par le formulaire et utilise MySQL comme base de données.
+This application allows candidates to fill out a hiring form and upload documents. A PHP backend handles the storage of submitted data and uses MySQL as the database.
 
-## Fonctionnalités
+## Features
 
-- Soumission de formulaires avec téléchargement de documents
-- Gestion des enregistrements de formulaires
-- Interface utilisateur intuitive en JavaScript
-- Système de validation des données
-- Generation de lien
+- Form submission with document uploads  
+- Management of form submissions  
+- Intuitive user interface with JavaScript  
+- Data validation system  
+- Link generation  
 
-## Prérequis
+## Requirements
 
-- PHP (version 7.4 ou supérieure)
-- Apache ou Nginx (serveur web)
-- MySQL (pour la base de données)
-- Composer (gestionnaire de dépendances pour PHP)
+- PHP (version 7.4 or higher)  
+- Apache or Nginx (web server)  
+- MySQL (database)  
+- Composer (PHP dependency manager)  
 
 ## Installation
 
-1. Clonez le dépôt
+1. Clone the repository:
 
    ```bash
-   git clone https://votre-repository-url.git
-   cd votre-repository
+   git clone https://your-repository-url.git
+   cd your-repository

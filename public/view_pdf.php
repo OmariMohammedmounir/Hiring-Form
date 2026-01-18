@@ -24,7 +24,7 @@ if (!file_exists($filePath)) {
     exit();
 }
 
-// Set the appropriate headers and output the PDF
+
 header('Content-Type: application/pdf');
 header('Content-Disposition: inline; filename="' . $file . '"');
 header('Content-Length: ' . filesize($filePath));
